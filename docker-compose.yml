@@ -15,10 +15,15 @@ services:
 
   apache:
     image: httpd:latest
+    # para que puedan probar en el puerto 9090
+    ports:
+      - "9090:80"
     volumes:
       - ./apache:/usr/local/apache2/htdocs
 
-  #python:
-  #  build: ./python
-  #  ports:
-  #    - "5000:5000"
+  python:
+    build: ./python
+    volumes:
+      - ./python:/app
+    ports:
+      - "8501:8501"
