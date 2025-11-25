@@ -1,13 +1,21 @@
 <html>
-<body>
-    <!-- Latest compiled and minified CSS -->
+       <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://code.s4d.io/widget-space/production/main.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://code.s4d.io/widget-space/production/bundle.js"></script>
+<body>
+ <div id="my-space-widget" />
 
-    <div class="webexteams-widget" data-toggle="webex-space"
-        data-access-token="WEBEX_ACCESS_TOKEN"
-        data-destination-id="TARGET_USER_EMAIL"
-        data-destination-type="email" />
+<script>
+  // Grab DOM element where widget will be attached
+  var widgetEl = document.getElementById('my-space-widget');
+
+  // Initialize a new Space widget
+  webex.widget(widgetEl).spaceWidget({
+    accessToken: 'OTJlZTFiODEtNDJlZC00YTgzLTlmNTgtZTRmZWI2MmNhN2YzZThiYWYyMjEtYTIz_P0A1_2c8af025-7907-4b20-8951-8d739b0ec3c0',   // tu token de acceso
+    destinationType: 'spaceId',
+    destinationId: 'Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vNzk2NTE4ZTAtYzQwMy0xMWYwLTk3ZTEtOGIwYTU2Y2Y4MTll'   //el rooms id 
+  });
+</script>
 </body>
 </html>
